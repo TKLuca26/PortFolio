@@ -10,7 +10,33 @@
 <meta property="og:type" content="profile">
 <meta property="og:image" content="photo.jpg">
 <meta name="twitter:card" content="summary_large_image">
+<meta id="twitter-title" name="twitter:title" content="Luc Arnauld Tienoue Kamologne — Business Analyst · Data &amp; Stratégie">
+<meta id="twitter-description" name="twitter:description" content="Consultant indépendant à Douala, Cameroun. 20+ professionnels formés, 180 entreprises prospectées en B2B, 5 business cases chiffrés, certifié Anthropic Academy (AI Fluency, 2026).">
+<meta name="twitter:image" content="photo.jpg">
 <meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%231B5E44'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='30' font-weight='700' fill='%23FFC857' text-anchor='middle'%3ELK%3C/text%3E%3C/svg%3E">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Luc Arnauld Tienoue Kamologne",
+  "jobTitle": "Business Analyst — Data & Stratégie",
+  "description": "Consultant indépendant basé à Douala, Cameroun, orienté Business Analyst / Data & Stratégie.",
+  "email": "mailto:tienoueluc@outlook.fr",
+  "telephone": "+237656759409",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Douala",
+    "addressCountry": "CM"
+  },
+  "sameAs": ["https://www.linkedin.com/in/luc-arnauld-tienoue-kamologne/"],
+  "knowsLanguage": ["fr", "en"],
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "Université de Douala"
+  }
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,900&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -30,6 +56,16 @@
   --brick:#9A3324;
   --slate:#67716A;
   --line:#DBD7CC;
+  /* Fixed (theme-invariant) tokens: brand-green filled surfaces and the
+     deliberately-always-dark panels (contact band, sticky bar) must not
+     flip with light/dark mode, otherwise --ink/--paper inversion breaks
+     their contrast. Kept out of the dark media query on purpose. */
+  --forest-solid:#1B5E44;
+  --forest-solid-hover:#123C2C;
+  --gold-on-forest:#FFC857;
+  --surface-dark:#10201A;
+  --surface-dark-fg:#F4F1EA;
+  --surface-dark-fg-soft:#B7C1BA;
   --shadow: 0 1px 2px rgba(19,32,25,.04), 0 8px 24px -12px rgba(19,32,25,.18);
   --radius: 3px;
   --maxw: 1100px;
@@ -117,14 +153,14 @@ ul{margin:0;padding:0;list-style:none;}
   font-family:var(--font-mono);font-size:.78rem;font-weight:600;color:var(--slate);
   letter-spacing:.03em;
 }
-.lang-toggle button[aria-pressed="true"]{background:var(--forest);color:#fff;}
+.lang-toggle button[aria-pressed="true"]{background:var(--forest-solid);color:#fff;}
 .btn-contact-top{
   display:inline-flex;align-items:center;gap:6px;
-  background:var(--forest);color:#fff;
+  background:var(--forest-solid);color:#fff;
   padding:8px 16px;border-radius:999px;text-decoration:none;
   font-size:.85rem;font-weight:600;white-space:nowrap;
 }
-.btn-contact-top:hover{background:var(--forest-deep);}
+.btn-contact-top:hover{background:var(--forest-solid-hover);}
 
 /* ============ 4. BUTTONS ============ */
 .btn{
@@ -134,8 +170,8 @@ ul{margin:0;padding:0;list-style:none;}
   transition:transform .12s ease, background .15s ease, border-color .15s ease;
 }
 .btn:active{transform:translateY(1px);}
-.btn-primary{background:var(--forest);color:#fff;}
-.btn-primary:hover{background:var(--forest-deep);}
+.btn-primary{background:var(--forest-solid);color:#fff;}
+.btn-primary:hover{background:var(--forest-solid-hover);}
 .btn-outline{background:transparent;color:var(--ink);border-color:var(--ink);}
 .btn-outline:hover{border-color:var(--forest);color:var(--forest);}
 .btn-ghost{background:var(--paper-sunken);color:var(--ink);}
@@ -201,12 +237,10 @@ ul{margin:0;padding:0;list-style:none;}
 }
 
 /* ============ 6. STAT ROW ============ */
-.stats{background:var(--forest);color:#fff;padding:38px 0;}
+.stats{background:var(--forest-solid);color:#fff;padding:38px 0;}
 .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;}
-.stat-num{font-family:var(--font-head);font-weight:700;font-size:clamp(1.6rem,3vw,2.3rem);color:var(--gold-tint,#fff);}
-@media (prefers-color-scheme: dark){.stat-num{color:#fff;}}
-.stat-num{color:#fff;}
-.stat-num .accent{color:var(--gold);}
+.stat-num{font-family:var(--font-head);font-weight:700;font-size:clamp(1.6rem,3vw,2.3rem);}
+.stat-num .accent{color:var(--gold-on-forest);}
 .stat-label{font-size:.86rem;opacity:.92;margin-top:4px;max-width:24ch;}
 
 /* ============ 7. SECTION GENERICS ============ */
@@ -351,18 +385,18 @@ section{padding:72px 0;}
 
 /* ============ 14. CONTACT ============ */
 .contact-panel{
-  background:var(--ink);color:var(--paper);padding:56px 0;
+  background:var(--surface-dark);color:var(--surface-dark-fg);padding:56px 0;
 }
 .contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:start;}
-.contact-panel .section-title{color:var(--paper);}
+.contact-panel .section-title{color:var(--surface-dark-fg);}
 .contact-panel .eyebrow{color:var(--gold);}
 .contact-list{display:flex;flex-direction:column;gap:16px;margin-top:24px;}
 .contact-row{display:flex;gap:14px;align-items:baseline;font-size:.95rem;}
 .contact-row .k{font-family:var(--font-mono);font-size:.74rem;color:#9AA79E;text-transform:uppercase;letter-spacing:.07em;min-width:130px;}
-.contact-row a{text-decoration:none;color:var(--paper);border-bottom:1px solid rgba(244,243,238,.35);}
+.contact-row a{text-decoration:none;color:var(--surface-dark-fg);border-bottom:1px solid rgba(244,241,234,.35);}
 .contact-row a:hover{border-color:var(--gold);}
 .contact-ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px;}
-.contact-panel .btn-outline{border-color:var(--paper);color:var(--paper);}
+.contact-panel .btn-outline{border-color:var(--surface-dark-fg);color:var(--surface-dark-fg);}
 .contact-panel .btn-outline:hover{border-color:var(--gold);color:var(--gold);}
 
 /* ============ 15. FOOTER ============ */
@@ -372,7 +406,7 @@ footer p{font-size:.78rem;color:var(--slate);font-family:var(--font-mono);}
 /* ============ 16. STICKY CTA BAR ============ */
 .sticky-cta{
   position:fixed;left:0;right:0;bottom:0;z-index:60;
-  background:var(--ink);color:var(--paper);
+  background:var(--surface-dark);color:var(--surface-dark-fg);
   border-top:1px solid var(--gold);
   transform:translateY(100%);transition:transform .25s ease;
 }
@@ -381,12 +415,12 @@ footer p{font-size:.78rem;color:var(--slate);font-family:var(--font-mono);}
   max-width:var(--maxw);margin:0 auto;padding:12px 24px;
   display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;
 }
-.sticky-cta-text{font-size:.85rem;font-family:var(--font-mono);color:#B7C1BA;}
-.sticky-cta-text strong{color:var(--paper);}
+.sticky-cta-text{font-size:.85rem;font-family:var(--font-mono);color:var(--surface-dark-fg-soft);}
+.sticky-cta-text strong{color:var(--surface-dark-fg);}
 .sticky-cta-actions{display:flex;gap:10px;flex-wrap:wrap;}
-.sticky-cta .btn-primary{background:var(--gold);color:var(--ink);}
+.sticky-cta .btn-primary{background:var(--gold);color:var(--surface-dark);}
 .sticky-cta .btn-primary:hover{background:#CE9A44;}
-.sticky-cta .btn-outline{border-color:var(--paper);color:var(--paper);}
+.sticky-cta .btn-outline{border-color:var(--surface-dark-fg);color:var(--surface-dark-fg);}
 
 /* ============ 17. RESPONSIVE ============ */
 @media (max-width: 900px){
@@ -418,6 +452,13 @@ footer p{font-size:.78rem;color:var(--slate);font-family:var(--font-mono);}
 </style>
 </head>
 <body>
+
+<noscript>
+  <div style="background:#B8791E;color:#132019;padding:14px 20px;text-align:center;font-family:sans-serif;font-size:.9rem;">
+    Ce site nécessite JavaScript pour afficher l'intégralité du contenu (études de cas, parcours, formation). Vous pouvez me contacter directement : <a href="mailto:tienoueluc@outlook.fr" style="color:#132019;font-weight:700;">tienoueluc@outlook.fr</a> · +237 656 75 94 09.
+    <br>This site needs JavaScript to display its full content (case studies, background, education). You can reach me directly at the email or phone number above.
+  </div>
+</noscript>
 
 <!-- ============ TOP BAR ============ -->
 <header class="topbar">
@@ -582,7 +623,7 @@ footer p{font-size:.78rem;color:var(--slate);font-family:var(--font-mono);}
     <div>
       <div class="eyebrow" data-i18n="contact.kicker">Disponibilité immédiate</div>
       <h2 class="section-title" data-i18n="contact.title">Parlons de votre besoin</h2>
-      <p class="section-sub" style="color:#B7C1BA" data-i18n="contact.sub">Pas de formulaire, pas d'étape supplémentaire — un email ou un appel suffit.</p>
+      <p class="section-sub" style="color:var(--surface-dark-fg-soft)" data-i18n="contact.sub">Pas de formulaire, pas d'étape supplémentaire — un email ou un appel suffit.</p>
       <div class="contact-ctas">
         <a class="btn btn-primary" href="mailto:tienoueluc@outlook.fr" data-i18n="contact.ctaEmail">M'écrire</a>
         <a class="btn btn-outline" href="tel:+237656759409" data-i18n="contact.ctaCall">M'appeler</a>
@@ -1235,6 +1276,8 @@ function applyStaticText(lang){
   document.getElementById("meta-description").setAttribute("content", d.doc.description);
   document.getElementById("og-title").setAttribute("content", d.doc.title);
   document.getElementById("og-description").setAttribute("content", d.doc.description);
+  document.getElementById("twitter-title").setAttribute("content", d.doc.title);
+  document.getElementById("twitter-description").setAttribute("content", d.doc.description);
 
   Array.prototype.forEach.call(document.querySelectorAll("[data-i18n]"), function(node){
     var path = node.getAttribute("data-i18n").split(".");
@@ -1290,6 +1333,23 @@ document.addEventListener("DOMContentLoaded", function(){
   }
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
+
+  // Re-measure any open accordion (case study / STAR story) on resize.
+  // Their max-height is set to a fixed pixel value (scrollHeight) when
+  // opened, which goes stale if the viewport is resized afterwards
+  // (e.g. rotating a tablet, or a desktop window resize) — without this,
+  // content added by reflow would get clipped.
+  var resizeTimer = null;
+  function remeasureOpenAccordions(){
+    Array.prototype.forEach.call(document.querySelectorAll('[data-open="true"]'), function(card){
+      var body = card.querySelector(".case-body, .star-body");
+      if(body){ body.style.maxHeight = body.scrollHeight + "px"; }
+    });
+  }
+  window.addEventListener("resize", function(){
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(remeasureOpenAccordions, 150);
+  });
 });
 
 })();
