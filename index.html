@@ -1,0 +1,1299 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title id="doc-title">Luc Arnauld Tienoue Kamologne — Business Analyst · Data &amp; Stratégie</title>
+<meta id="meta-description" name="description" content="Consultant indépendant à Douala, Cameroun — Business Analyst orienté data &amp; stratégie. 20+ professionnels formés, 180 entreprises prospectées en B2B, 125,5 Md FCFA de marché chiffré.">
+<meta id="og-title" property="og:title" content="Luc Arnauld Tienoue Kamologne — Business Analyst · Data &amp; Stratégie">
+<meta id="og-description" property="og:description" content="Consultant indépendant à Douala, Cameroun. 20+ professionnels formés, 180 entreprises prospectées en B2B, 5 business cases chiffrés, certifié Anthropic Academy (AI Fluency, 2026).">
+<meta property="og:type" content="profile">
+<meta property="og:image" content="photo.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="color-scheme" content="light dark">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,900&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ============ 1. DESIGN TOKENS ============ */
+:root{
+  --ink:#132019;
+  --ink-soft:#3B4A42;
+  --paper:#F4F3EE;
+  --paper-raised:#FFFFFF;
+  --paper-sunken:#EAE8E0;
+  --forest:#1B5E44;
+  --forest-deep:#123C2C;
+  --forest-tint:#E4EEE8;
+  --gold:#B8791E;
+  --gold-tint:#F6E9D3;
+  --brick:#9A3324;
+  --slate:#67716A;
+  --line:#DBD7CC;
+  --shadow: 0 1px 2px rgba(19,32,25,.04), 0 8px 24px -12px rgba(19,32,25,.18);
+  --radius: 3px;
+  --maxw: 1100px;
+  --font-head: 'Fraunces', 'Iowan Old Style', 'Georgia', serif;
+  --font-body: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'IBM Plex Mono', 'SFMono-Regular', Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --ink:#ECEEE9;
+    --ink-soft:#AEB8B0;
+    --paper:#0E1512;
+    --paper-raised:#172119;
+    --paper-sunken:#0A0F0C;
+    --forest:#57AE83;
+    --forest-deep:#3D8C68;
+    --forest-tint:#17281F;
+    --gold:#E3B354;
+    --gold-tint:#2A2313;
+    --brick:#E08A6C;
+    --slate:#8B958D;
+    --line:#26302A;
+    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 30px -12px rgba(0,0,0,.55);
+  }
+}
+
+/* ============ 2. RESET ============ */
+*,*::before,*::after{box-sizing:border-box;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--font-body);
+  font-size:16px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  transition:background .2s ease, color .2s ease;
+}
+img{max-width:100%;display:block;}
+a{color:inherit;}
+button{font:inherit;}
+h1,h2,h3,h4{font-family:var(--font-head);margin:0;font-weight:700;letter-spacing:-.01em;}
+p{margin:0;}
+ul{margin:0;padding:0;list-style:none;}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px;}
+@media (prefers-reduced-motion: reduce){
+  *{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important;scroll-behavior:auto !important;}
+}
+
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+.eyebrow{
+  font-family:var(--font-mono);
+  font-size:.72rem;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--forest);
+  font-weight:600;
+}
+.num{font-family:var(--font-mono);font-variant-numeric:tabular-nums;}
+
+/* ============ 3. TOP BAR ============ */
+.topbar{
+  position:sticky;top:0;z-index:50;
+  background:color-mix(in srgb, var(--paper) 88%, transparent);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.topbar-inner{
+  max-width:var(--maxw);margin:0 auto;padding:14px 24px;
+  display:flex;align-items:center;justify-content:space-between;gap:12px;
+}
+.brand{
+  font-family:var(--font-head);font-weight:700;font-size:1.02rem;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+.brand span{color:var(--forest);}
+.topbar-actions{display:flex;align-items:center;gap:10px;flex-shrink:0;}
+.lang-toggle{
+  display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;
+  background:var(--paper-raised);
+}
+.lang-toggle button{
+  border:0;background:transparent;padding:7px 13px;cursor:pointer;
+  font-family:var(--font-mono);font-size:.78rem;font-weight:600;color:var(--slate);
+  letter-spacing:.03em;
+}
+.lang-toggle button[aria-pressed="true"]{background:var(--forest);color:#fff;}
+.btn-contact-top{
+  display:inline-flex;align-items:center;gap:6px;
+  background:var(--forest);color:#fff;
+  padding:8px 16px;border-radius:999px;text-decoration:none;
+  font-size:.85rem;font-weight:600;white-space:nowrap;
+}
+.btn-contact-top:hover{background:var(--forest-deep);}
+
+/* ============ 4. BUTTONS ============ */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  padding:14px 24px;border-radius:2px;text-decoration:none;
+  font-weight:600;font-size:.95rem;cursor:pointer;border:1.5px solid transparent;
+  transition:transform .12s ease, background .15s ease, border-color .15s ease;
+}
+.btn:active{transform:translateY(1px);}
+.btn-primary{background:var(--forest);color:#fff;}
+.btn-primary:hover{background:var(--forest-deep);}
+.btn-outline{background:transparent;color:var(--ink);border-color:var(--ink);}
+.btn-outline:hover{border-color:var(--forest);color:var(--forest);}
+.btn-ghost{background:var(--paper-sunken);color:var(--ink);}
+.btn-sm{padding:9px 14px;font-size:.8rem;}
+
+/* ============ 5. HERO ============ */
+.hero{padding:64px 0 56px;}
+.hero-grid{
+  display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;
+}
+.hero-eyebrow{margin-bottom:18px;}
+.hero h1{
+  font-size:clamp(2.1rem, 4.4vw, 3.1rem);line-height:1.06;margin-bottom:14px;
+}
+.hero-role{
+  font-family:var(--font-head);font-style:italic;font-weight:500;
+  color:var(--forest);font-size:clamp(1.15rem,2vw,1.4rem);margin-bottom:20px;
+}
+.hero-value{
+  font-size:1.08rem;color:var(--ink-soft);max-width:52ch;margin-bottom:22px;
+}
+.hero-value strong{color:var(--ink);font-weight:600;}
+.hero-meta{
+  display:flex;flex-wrap:wrap;gap:8px 18px;font-size:.88rem;color:var(--slate);
+  font-family:var(--font-mono);margin-bottom:30px;
+}
+.hero-meta a{text-decoration:none;border-bottom:1px solid transparent;}
+.hero-meta a:hover{border-color:currentColor;}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px;align-items:stretch;}
+.cv-group{
+  display:flex;flex-direction:column;gap:6px;border:1.5px solid var(--ink);
+  padding:10px 16px;border-radius:2px;min-width:190px;
+}
+.cv-group-label{font-size:.72rem;text-transform:uppercase;letter-spacing:.09em;font-weight:700;color:var(--ink-soft);font-family:var(--font-mono);}
+.cv-group-links{display:flex;gap:14px;}
+.cv-group-links a{
+  font-weight:600;text-decoration:none;color:var(--forest);font-size:.92rem;
+  display:inline-flex;align-items:center;gap:5px;
+}
+.cv-group-links a:hover{color:var(--forest-deep);text-decoration:underline;}
+
+.hero-photo-wrap{position:relative;justify-self:center;}
+.hero-photo-frame{
+  position:relative;width:min(320px, 100%);
+  border:1px solid var(--line);
+  background:var(--ink);
+  padding:14px;
+  box-shadow:var(--shadow);
+}
+.hero-photo-frame img{
+  width:100%;aspect-ratio:524/640;object-fit:cover;
+  filter:grayscale(.08);
+}
+.hero-photo-frame::before,.hero-photo-frame::after{
+  content:"";position:absolute;width:26px;height:26px;
+  border:3px solid var(--gold);
+}
+.hero-photo-frame::before{top:-8px;left:-8px;border-right:0;border-bottom:0;}
+.hero-photo-frame::after{bottom:-8px;right:-8px;border-left:0;border-top:0;}
+.hero-photo-caption{
+  margin-top:14px;text-align:center;font-family:var(--font-mono);
+  font-size:.75rem;color:var(--slate);letter-spacing:.04em;
+}
+
+/* ============ 6. STAT ROW ============ */
+.stats{background:var(--forest);color:#fff;padding:38px 0;}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;}
+.stat-num{font-family:var(--font-head);font-weight:700;font-size:clamp(1.6rem,3vw,2.3rem);color:var(--gold-tint,#fff);}
+@media (prefers-color-scheme: dark){.stat-num{color:#fff;}}
+.stat-num{color:#fff;}
+.stat-num .accent{color:var(--gold);}
+.stat-label{font-size:.86rem;opacity:.92;margin-top:4px;max-width:24ch;}
+
+/* ============ 7. SECTION GENERICS ============ */
+section{padding:72px 0;}
+.section-head{margin-bottom:40px;max-width:62ch;}
+.section-kicker{margin-bottom:10px;}
+.section-title{font-size:clamp(1.6rem,2.6vw,2.1rem);}
+.section-sub{color:var(--ink-soft);margin-top:12px;font-size:1rem;}
+.section-alt{background:var(--paper-sunken);}
+
+/* ============ 8. WHY ME ============ */
+.why-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+.why-card{background:var(--paper-raised);padding:22px 20px;display:flex;flex-direction:column;gap:10px;}
+.why-index{font-family:var(--font-mono);color:var(--gold);font-weight:700;font-size:.85rem;}
+.why-title{font-family:var(--font-head);font-weight:700;font-size:1.02rem;line-height:1.25;}
+.why-proof{font-size:.86rem;color:var(--ink-soft);line-height:1.55;}
+
+/* ============ 9. SKILLS ============ */
+.skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.skill-card{background:var(--paper-raised);border:1px solid var(--line);padding:20px;border-left:3px solid var(--forest);}
+.skill-title{font-weight:700;margin-bottom:6px;font-size:.98rem;}
+.skill-desc{font-size:.87rem;color:var(--ink-soft);}
+.skill-note{
+  margin-top:22px;font-size:.82rem;color:var(--slate);font-family:var(--font-mono);
+  border-top:1px dashed var(--line);padding-top:14px;
+}
+
+/* ============ 10. TIMELINE (EXPERIENCE) ============ */
+.timeline{display:flex;flex-direction:column;}
+.tl-item{
+  display:grid;grid-template-columns:150px 1px 1fr;gap:24px;
+  padding:22px 0;border-bottom:1px solid var(--line);
+}
+.tl-item:first-child{padding-top:0;}
+.tl-date{font-family:var(--font-mono);font-size:.82rem;color:var(--slate);padding-top:3px;}
+.tl-rule{background:var(--line);}
+.tl-role{font-weight:700;font-size:1.02rem;font-family:var(--font-head);}
+.tl-org{color:var(--forest);font-weight:600;font-size:.9rem;margin-top:2px;margin-bottom:10px;}
+.tl-bullets{display:flex;flex-direction:column;gap:5px;}
+.tl-bullets li{font-size:.9rem;color:var(--ink-soft);padding-left:16px;position:relative;}
+.tl-bullets li::before{content:"—";position:absolute;left:0;color:var(--gold);}
+.tl-tag{
+  display:inline-block;margin-top:10px;font-family:var(--font-mono);font-size:.72rem;
+  color:var(--brick);border:1px solid currentColor;padding:2px 8px;letter-spacing:.02em;
+}
+
+/* ============ 11. EDUCATION ============ */
+.edu-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px;}
+.edu-list{display:flex;flex-direction:column;gap:16px;}
+.edu-item{display:flex;gap:14px;}
+.edu-year{font-family:var(--font-mono);font-size:.82rem;color:var(--slate);min-width:44px;padding-top:2px;}
+.edu-name{font-weight:600;font-size:.94rem;}
+.edu-org{font-size:.83rem;color:var(--ink-soft);}
+.badge-row{display:flex;flex-direction:column;gap:14px;}
+.badge{
+  display:flex;gap:14px;align-items:flex-start;background:var(--gold-tint);
+  border:1px solid var(--gold);padding:16px;
+}
+.badge-mark{
+  font-family:var(--font-mono);font-weight:700;color:var(--gold);font-size:.72rem;
+  border:1.5px solid var(--gold);border-radius:50%;width:34px;height:34px;
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.badge-title{font-weight:700;font-size:.92rem;}
+.badge-org{font-size:.8rem;color:var(--ink-soft);margin-top:2px;}
+.badge-head{font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;font-weight:700;color:var(--gold);margin-bottom:12px;font-family:var(--font-mono);}
+
+/* ============ 12. CASE STUDIES ============ */
+.cases-list{display:flex;flex-direction:column;gap:18px;}
+.case-card{background:var(--paper-raised);border:1px solid var(--line);box-shadow:var(--shadow);}
+.case-head{padding:24px 24px 20px;display:flex;flex-direction:column;gap:14px;}
+.case-top{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap;}
+.case-label{font-family:var(--font-mono);font-size:.74rem;color:var(--slate);letter-spacing:.06em;text-transform:uppercase;}
+.case-title{font-size:1.15rem;margin-top:4px;}
+.case-result{
+  font-family:var(--font-head);font-weight:700;color:var(--forest);
+  font-size:clamp(1.15rem,2vw,1.45rem);line-height:1.25;
+  border-left:3px solid var(--gold);padding-left:14px;margin-top:6px;
+}
+.case-tags{display:flex;flex-wrap:wrap;gap:8px;}
+.case-tag{
+  font-family:var(--font-mono);font-size:.72rem;background:var(--forest-tint);color:var(--forest);
+  padding:4px 10px;border-radius:999px;font-weight:600;
+}
+.case-toggle{
+  align-self:flex-start;background:none;border:1px solid var(--ink);color:var(--ink);
+  padding:8px 16px;font-size:.82rem;font-weight:600;cursor:pointer;border-radius:2px;
+  display:inline-flex;align-items:center;gap:8px;
+}
+.case-toggle:hover{border-color:var(--forest);color:var(--forest);}
+.case-toggle .chevron{transition:transform .18s ease;font-size:.7rem;}
+.case-card[data-open="true"] .chevron{transform:rotate(180deg);}
+.case-body{
+  max-height:0;overflow:hidden;transition:max-height .28s ease;
+  border-top:1px solid var(--line);
+}
+.case-card[data-open="true"] .case-body{border-top:1px solid var(--line);}
+.case-body-inner{padding:22px 24px 26px;display:flex;flex-direction:column;gap:18px;}
+.case-block-label{
+  font-family:var(--font-mono);font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;
+  color:var(--gold);font-weight:700;margin-bottom:6px;
+}
+.case-block p{font-size:.92rem;color:var(--ink-soft);line-height:1.6;}
+.case-block p + p{margin-top:8px;}
+.data-chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:4px;}
+.data-chip{
+  background:var(--paper-sunken);border:1px solid var(--line);padding:8px 12px;
+  font-family:var(--font-mono);font-size:.78rem;min-width:120px;
+}
+.data-chip .k{display:block;color:var(--slate);font-size:.7rem;margin-bottom:2px;}
+.data-chip .v{display:block;font-weight:700;color:var(--ink);}
+
+/* ============ 13. STAR STORIES ============ */
+.star-list{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+.star-card{background:var(--paper-raised);border:1px solid var(--line);padding:22px;display:flex;flex-direction:column;gap:12px;box-shadow:var(--shadow);}
+.star-cat{font-family:var(--font-mono);font-size:.72rem;color:var(--brick);text-transform:uppercase;letter-spacing:.06em;font-weight:700;}
+.star-title{font-size:1.05rem;line-height:1.25;}
+.star-result{font-size:.88rem;color:var(--forest);font-weight:600;}
+.star-toggle{
+  background:none;border:1px solid var(--ink);color:var(--ink);padding:7px 14px;
+  font-size:.78rem;font-weight:600;cursor:pointer;align-self:flex-start;border-radius:2px;
+}
+.star-toggle:hover{border-color:var(--forest);color:var(--forest);}
+.star-body{max-height:0;overflow:hidden;transition:max-height .28s ease;}
+.star-card[data-open="true"] .star-body{margin-top:4px;}
+.star-block-label{font-family:var(--font-mono);font-size:.68rem;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:4px;letter-spacing:.06em;}
+.star-block p{font-size:.85rem;color:var(--ink-soft);line-height:1.55;}
+.star-block{margin-bottom:12px;}
+
+/* ============ 13b. BEYOND WORK ============ */
+.beyond-band{
+  padding:34px 0;background:var(--paper);
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+}
+.beyond-inner{max-width:660px;margin:0 auto;text-align:center;}
+.beyond-band .eyebrow{color:var(--slate);}
+.beyond-line1{
+  font-family:var(--font-head);font-style:italic;font-weight:500;
+  font-size:1.05rem;color:var(--ink);margin-top:12px;line-height:1.55;
+}
+.beyond-line2{font-size:.85rem;color:var(--ink-soft);margin-top:10px;line-height:1.6;}
+
+/* ============ 14. CONTACT ============ */
+.contact-panel{
+  background:var(--ink);color:var(--paper);padding:56px 0;
+}
+.contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:start;}
+.contact-panel .section-title{color:var(--paper);}
+.contact-panel .eyebrow{color:var(--gold);}
+.contact-list{display:flex;flex-direction:column;gap:16px;margin-top:24px;}
+.contact-row{display:flex;gap:14px;align-items:baseline;font-size:.95rem;}
+.contact-row .k{font-family:var(--font-mono);font-size:.74rem;color:#9AA79E;text-transform:uppercase;letter-spacing:.07em;min-width:130px;}
+.contact-row a{text-decoration:none;color:var(--paper);border-bottom:1px solid rgba(244,243,238,.35);}
+.contact-row a:hover{border-color:var(--gold);}
+.contact-ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px;}
+.contact-panel .btn-outline{border-color:var(--paper);color:var(--paper);}
+.contact-panel .btn-outline:hover{border-color:var(--gold);color:var(--gold);}
+
+/* ============ 15. FOOTER ============ */
+footer{padding:28px 0 120px;text-align:center;}
+footer p{font-size:.78rem;color:var(--slate);font-family:var(--font-mono);}
+
+/* ============ 16. STICKY CTA BAR ============ */
+.sticky-cta{
+  position:fixed;left:0;right:0;bottom:0;z-index:60;
+  background:var(--ink);color:var(--paper);
+  border-top:1px solid var(--gold);
+  transform:translateY(100%);transition:transform .25s ease;
+}
+.sticky-cta.visible{transform:translateY(0);}
+.sticky-cta-inner{
+  max-width:var(--maxw);margin:0 auto;padding:12px 24px;
+  display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;
+}
+.sticky-cta-text{font-size:.85rem;font-family:var(--font-mono);color:#B7C1BA;}
+.sticky-cta-text strong{color:var(--paper);}
+.sticky-cta-actions{display:flex;gap:10px;flex-wrap:wrap;}
+.sticky-cta .btn-primary{background:var(--gold);color:var(--ink);}
+.sticky-cta .btn-primary:hover{background:#CE9A44;}
+.sticky-cta .btn-outline{border-color:var(--paper);color:var(--paper);}
+
+/* ============ 17. RESPONSIVE ============ */
+@media (max-width: 900px){
+  .hero-grid{grid-template-columns:1fr;gap:36px;}
+  .hero-photo-wrap{order:-1;}
+  .hero-photo-frame{width:min(240px,60vw);margin:0 auto;}
+  .stats-grid{grid-template-columns:repeat(2,1fr);gap:24px;}
+  .why-grid{grid-template-columns:repeat(2,1fr);}
+  .skills-grid{grid-template-columns:1fr 1fr;}
+  .edu-grid{grid-template-columns:1fr;gap:32px;}
+  .star-list{grid-template-columns:1fr;}
+  .contact-grid{grid-template-columns:1fr;gap:32px;}
+  .tl-item{grid-template-columns:1fr;gap:6px;}
+  .tl-rule{display:none;}
+}
+@media (max-width: 600px){
+  .topbar-inner{padding:12px 16px;}
+  .brand{font-size:.88rem;}
+  .btn-contact-top{padding:7px 12px;font-size:.78rem;}
+  .wrap{padding:0 18px;}
+  .hero{padding:40px 0 44px;}
+  .why-grid{grid-template-columns:1fr;}
+  .skills-grid{grid-template-columns:1fr;}
+  .stats-grid{grid-template-columns:1fr 1fr;}
+  section{padding:52px 0;}
+  .case-top{flex-direction:column;}
+  footer{padding-bottom:150px;}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ TOP BAR ============ -->
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">Luc Arnauld Tienoue <span>Kamologne</span></div>
+    <div class="topbar-actions">
+      <a class="btn-contact-top" id="topbar-contact" href="mailto:tienoueluc@outlook.fr">Me contacter</a>
+      <div class="lang-toggle" role="group" aria-label="Choix de la langue">
+        <button type="button" data-lang-btn="fr" aria-pressed="true">FR</button>
+        <button type="button" data-lang-btn="en" aria-pressed="false">EN</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow hero-eyebrow" data-i18n="hero.eyebrow">Consultant indépendant · Douala, Cameroun</div>
+      <h1>Luc Arnauld Tienoue Kamologne</h1>
+      <div class="hero-role" data-i18n="hero.role">Business Analyst — Data &amp; Structuration de problèmes</div>
+      <p class="hero-value" data-i18n-html="hero.value">20+ professionnels formés, 125,5 Md FCFA de marché chiffré, structuration de cas sous 90 secondes.</p>
+      <div class="hero-meta">
+        <span>Douala, Cameroun</span>
+        <a href="tel:+237656759409">+237 656 75 94 09</a>
+        <a href="mailto:tienoueluc@outlook.fr">tienoueluc@outlook.fr</a>
+        <a href="https://www.linkedin.com/in/luc-arnauld-tienoue-kamologne/" target="_blank" rel="noopener">linkedin.com/in/luc-arnauld-tienoue-kamologne</a>
+      </div>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="mailto:tienoueluc@outlook.fr" data-i18n="hero.ctaContact">Me contacter</a>
+        <div class="cv-group">
+          <span class="cv-group-label" data-i18n="hero.cvLabel">Télécharger mon CV</span>
+          <div class="cv-group-links">
+            <a href="cv-fr.pdf" download data-i18n="hero.cvFr">Version FR</a>
+            <a href="cv-en.pdf" download data-i18n="hero.cvEn">English version</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-photo-wrap">
+      <div class="hero-photo-frame">
+        <img src="data:image/jpeg;base64,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" alt="Portrait de Luc Arnauld Tienoue Kamologne" id="hero-photo-img">
+      </div>
+      <div class="hero-photo-caption" data-i18n="hero.photoCaption">Douala, Cameroun</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STAT ROW ============ -->
+<section class="stats">
+  <div class="wrap stats-grid">
+    <div>
+      <div class="stat-num"><span class="accent num">20+</span></div>
+      <div class="stat-label" data-i18n="stats.s1">professionnels formés en Excel / Power BI</div>
+    </div>
+    <div>
+      <div class="stat-num"><span class="accent num">180</span></div>
+      <div class="stat-label" data-i18n="stats.s2">entreprises prospectées en B2B</div>
+    </div>
+    <div>
+      <div class="stat-num"><span class="accent num">5</span></div>
+      <div class="stat-label" data-i18n="stats.s3">business cases chiffrés — marché, M&amp;A, data analytics</div>
+    </div>
+    <div>
+      <div class="stat-num"><span class="accent">Anthropic Academy</span></div>
+      <div class="stat-label" data-i18n="stats.s4">Certifié AI Fluency Framework &amp; Foundations (2026)</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY ME ============ -->
+<section id="why">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow section-kicker" data-i18n="why.kicker">Différenciation</div>
+      <h2 class="section-title" data-i18n="why.title">Pourquoi moi</h2>
+      <p class="section-sub" data-i18n="why.sub">Cinq preuves déjà présentes sur ce site, pas des adjectifs.</p>
+    </div>
+    <div class="why-grid" id="why-grid"></div>
+  </div>
+</section>
+
+<!-- ============ SKILLS ============ -->
+<section class="section-alt" id="skills">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow section-kicker" data-i18n="skills.kicker">Compétences</div>
+      <h2 class="section-title" data-i18n="skills.title">Compétences clés</h2>
+    </div>
+    <div class="skills-grid" id="skills-grid"></div>
+    <p class="skill-note" data-i18n="skills.note">Anglais — B1 (intermédiaire), en progression active via certifications. Aucune surestimation : ce niveau est vérifiable à l'oral.</p>
+  </div>
+</section>
+
+<!-- ============ EXPERIENCE ============ -->
+<section id="experience">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow section-kicker" data-i18n="exp.kicker">Parcours</div>
+      <h2 class="section-title" data-i18n="exp.title">Parcours professionnel</h2>
+    </div>
+    <div class="timeline" id="timeline"></div>
+  </div>
+</section>
+
+<!-- ============ EDUCATION ============ -->
+<section class="section-alt" id="education">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow section-kicker" data-i18n="edu.kicker">Formation</div>
+      <h2 class="section-title" data-i18n="edu.title">Formation &amp; certifications</h2>
+    </div>
+    <div class="edu-grid">
+      <div>
+        <div class="badge-head" data-i18n="edu.badgeHead">Certifications Anthropic Academy — 2026</div>
+        <div class="badge-row" id="badge-row"></div>
+      </div>
+      <div>
+        <div class="badge-head" data-i18n="edu.otherHead">Autres formations &amp; diplômes</div>
+        <div class="edu-list" id="edu-list"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CASE STUDIES ============ -->
+<section id="cases">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow section-kicker" data-i18n="cases.kicker">Preuve de compétence</div>
+      <h2 class="section-title" data-i18n="cases.title">Études de cas</h2>
+      <p class="section-sub" data-i18n="cases.sub">Cinq cas structurés et chiffrés, dont plusieurs construits en préparation d'entretiens de type conseil en stratégie (structuration, chiffrage, cas business).</p>
+    </div>
+    <div class="cases-list" id="cases-list"></div>
+  </div>
+</section>
+
+<!-- ============ STAR STORIES ============ -->
+<section class="section-alt" id="star">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow section-kicker" data-i18n="star.kicker">Expériences marquantes</div>
+      <h2 class="section-title" data-i18n="star.title">Trois histoires, format STAR</h2>
+    </div>
+    <div class="star-list" id="star-list"></div>
+  </div>
+</section>
+
+<!-- ============ BEYOND WORK (discreet personal touch) ============ -->
+<section class="beyond-band" id="beyond">
+  <div class="wrap beyond-inner">
+    <div class="eyebrow" data-i18n="beyond.kicker">Au-delà du travail</div>
+    <p class="beyond-line1" data-i18n-html="beyond.line1">Curieux de nature.</p>
+    <p class="beyond-line2" data-i18n-html="beyond.line2">Lecteur assidu.</p>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="contact-panel" id="contact">
+  <div class="wrap contact-grid">
+    <div>
+      <div class="eyebrow" data-i18n="contact.kicker">Disponibilité immédiate</div>
+      <h2 class="section-title" data-i18n="contact.title">Parlons de votre besoin</h2>
+      <p class="section-sub" style="color:#B7C1BA" data-i18n="contact.sub">Pas de formulaire, pas d'étape supplémentaire — un email ou un appel suffit.</p>
+      <div class="contact-ctas">
+        <a class="btn btn-primary" href="mailto:tienoueluc@outlook.fr" data-i18n="contact.ctaEmail">M'écrire</a>
+        <a class="btn btn-outline" href="tel:+237656759409" data-i18n="contact.ctaCall">M'appeler</a>
+      </div>
+    </div>
+    <div class="contact-list">
+      <div class="contact-row"><span class="k" data-i18n="contact.phone">Téléphone</span><a href="tel:+237656759409">+237 656 75 94 09</a></div>
+      <div class="contact-row"><span class="k" data-i18n="contact.email">Email</span><a href="mailto:tienoueluc@outlook.fr">tienoueluc@outlook.fr</a></div>
+      <div class="contact-row"><span class="k">LinkedIn</span><a href="https://www.linkedin.com/in/luc-arnauld-tienoue-kamologne/" target="_blank" rel="noopener">linkedin.com/in/luc-arnauld-tienoue-kamologne</a></div>
+      <div class="contact-row"><span class="k" data-i18n="contact.avail">Disponibilité</span><span data-i18n="contact.availVal">Immédiate</span></div>
+      <div class="contact-row"><span class="k" data-i18n="contact.place">Lieu préféré</span><span data-i18n="contact.placeVal">Hybride</span></div>
+      <div class="contact-row"><span class="k" data-i18n="contact.langs">Langues</span><span data-i18n="contact.langsVal">Français (natif), Anglais (B1)</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p data-i18n="footer.text">Luc Arnauld Tienoue Kamologne — Douala, Cameroun</p>
+  </div>
+</footer>
+
+<!-- ============ STICKY CTA ============ -->
+<div class="sticky-cta" id="sticky-cta">
+  <div class="sticky-cta-inner">
+    <div class="sticky-cta-text" data-i18n-html="sticky.text">Prêt à en discuter ? <strong>Réponse rapide garantie.</strong></div>
+    <div class="sticky-cta-actions">
+      <a class="btn btn-sm btn-outline" href="tel:+237656759409" data-i18n="sticky.call">Appeler</a>
+      <a class="btn btn-sm btn-primary" href="mailto:tienoueluc@outlook.fr" data-i18n="sticky.email">Écrire un email</a>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ======================================================================
+   PORTFOLIO — i18n data + rendering
+   Single translation object drives the whole page. No DOM duplication:
+   repeating sections (why/skills/timeline/education/cases/star) are
+   rendered from arrays on every language switch.
+   ====================================================================== */
+(function(){
+"use strict";
+
+var I18N = {
+  fr: {
+    doc: {
+      title: "Luc Arnauld Tienoue Kamologne — Business Analyst · Data & Stratégie",
+      description: "Consultant indépendant à Douala, Cameroun — Business Analyst orienté data & stratégie. 20+ professionnels formés, 180 entreprises prospectées en B2B, 125,5 Md FCFA de marché chiffré."
+    },
+    topbarContact: "Me contacter",
+    hero: {
+      eyebrow: "Consultant indépendant · Douala, Cameroun",
+      role: "Business Analyst — Data &amp; Structuration de problèmes",
+      value: "<strong>20+ professionnels formés</strong>, <strong>125,5 Md FCFA</strong> de marché chiffré, structuration de cas sous <strong>90 secondes</strong>.",
+      ctaContact: "Me contacter",
+      cvLabel: "Télécharger mon CV",
+      cvFr: "Version FR",
+      cvEn: "English version",
+      photoCaption: "Douala, Cameroun"
+    },
+    stats: {
+      s1: "professionnels formés en Excel / Power BI",
+      s2: "entreprises prospectées en B2B",
+      s3: "business cases chiffrés — marché, M&amp;A, data analytics",
+      s4: "Certifié AI Fluency Framework &amp; Foundations (2026)"
+    },
+    why: {
+      kicker: "Différenciation",
+      title: "Pourquoi moi",
+      sub: "Cinq preuves déjà présentes sur ce site, pas des adjectifs — chaque bloc se lit en moins de 8 secondes.",
+      items: [
+        { title: "Terrain ET données — rarement les deux à la fois", proof: "180 entreprises prospectées en B2B et conception de tableaux de bord Power BI/DAX en production : la plupart des profils Business Analyst ont l'un ou l'autre, rarement une pratique opérationnelle des deux." },
+        { title: "Certifié IA appliquée avant la vague", proof: "3 certifications Anthropic Academy obtenues en 2026 (AI Fluency: Framework & Foundations, Teaching the AI Fluency Framework, AI Fluency for Nonprofits) : capacité démontrée à intégrer l'IA dans l'analyse et la formation, pas seulement à en parler en entretien." },
+        { title: "Initiative documentée, pas déclarée", proof: "Deux cas chiffrés où de la valeur a été créée sans qu'on le lui demande : un contrat d'exécution transformé en mission de conseil récurrente (2 860 000 FCFA générés à ce jour), un programme de formation interne créé seul en pleine tension de trésorerie (720 000 FCFA générés, 12 professionnels formés)." },
+        { title: "Rigueur analytique visible sur cas réels", proof: "Sanity-checks systématiques sur les 5 business cases du portfolio, distinction contribution absolue vs taux de marge, remise en cause chiffrée d'un objectif client irréaliste (×76) plutôt qu'une validation par défaut." },
+        { title: "Pédagogue", proof: "Plus de 30 professionnels formés à ce jour (HOODO, IIBA Cameroun, VESTIGE Cameroun) : capacité à vulgariser des sujets techniques pour des décideurs non-techniques, compétence directement transférable à la restitution de recommandations." }
+      ]
+    },
+    skills: {
+      kicker: "Compétences",
+      title: "Compétences clés",
+      note: "Anglais — B1 (intermédiaire), en progression active via certifications. Aucune surestimation : ce niveau est vérifiable à l'oral.",
+      items: [
+        { title: "Structuration de problèmes", desc: "Issue tree, MECE, cadre de profitabilité (Revenus = Prix × Volume ; Coûts = Fixes + Variables)." },
+        { title: "Chiffrage & market sizing", desc: "Estimations sous contrainte de temps, avec sanity-check systématique des résultats." },
+        { title: "Power BI & Excel avancé", desc: "Conception de tableaux de bord, DAX, KPI reporting." },
+        { title: "IA appliquée", desc: "Claude / Anthropic AI Fluency Framework, automatisation de tâches, formation à l'IA responsable pour ONG (protection des données, S&E)." },
+        { title: "Développement commercial B2B", desc: "Prospection, gestion de comptes clés, relation client." },
+        { title: "Communication bilingue", desc: "Français (natif) · Anglais — B1, intermédiaire, en progression active." }
+      ]
+    },
+    exp: {
+      kicker: "Parcours",
+      title: "Parcours professionnel",
+      items: [
+        { date: "06/2025 — Aujourd'hui", role: "Représentant commercial B2B &amp; Analyste", org: "HOODO SARL", bullets: ["Tableaux de bord KPI commerciaux (Excel/Power BI)", "Formation de plus de 20 professionnels en Excel/Power BI", "Gestion de comptes clés"], tag: null },
+        { date: "06/2025 — Aujourd'hui", role: "Formateur Excel / Power BI (interne)", org: "HOODO SARL", bullets: ["Formation de plus de 20 professionnels à Excel avancé et Power BI pour un usage professionnel (renforcement de capacités interne)"], tag: "Mission de conseil" },
+        { date: "04/2024 — 09/2024", role: "Vice-Président", org: "Association SDJ", bullets: ["Coordination de projets éducatifs", "Conception de modules de formation IA/numérique pour les jeunes", "Reporting suivi-évaluation"], tag: null },
+        { date: "02/2023 — 03/2024", role: "Représentant technico-commercial", org: "HOODO Consulting", bullets: ["Prospection de 180 entreprises", "300+ contenus digitaux produits", "Formation des équipes aux nouveaux workflows digitaux"], tag: null },
+        { date: "06/2023 — 11/2023", role: "Consultant digital &amp; Business Analyst", org: "BF Tech SARL", bullets: ["Analyse de l'entonnoir marketing", "Recommandations d'optimisation stratégique", "Reporting de performance"], tag: null },
+        { date: "09/2022 — 12/2023", role: "Stagiaire / Assistant Éducation", org: "Plan International Cameroun", bullets: ["Collecte et structuration des données bénéficiaires", "Traduction français-anglais lors des évaluations de besoins"], tag: null }
+      ]
+    },
+    edu: {
+      kicker: "Formation",
+      title: "Formation &amp; certifications",
+      badgeHead: "Certifications Anthropic Academy — 2026",
+      otherHead: "Autres formations &amp; diplômes",
+      badges: [
+        { title: "AI Fluency: Framework &amp; Foundations", org: "Anthropic Academy (UCC / Ringling College)" },
+        { title: "Teaching the AI Fluency Framework", org: "Anthropic Academy" },
+        { title: "AI Fluency for Nonprofits", org: "Anthropic Academy × GivingTuesday" }
+      ],
+      other: [
+        { year: "2026", name: "Climate-Smart Agribusiness: Adaptation (CSA2)", org: "GIZ Agribusiness Framework eAcademy" },
+        { year: "2026", name: "Building an Investment-Ready Agribusiness", org: "GIZ Agribusiness Framework eAcademy" },
+        { year: "2026", name: "Business Models for Agri-Food Enterprises", org: "GIZ Agribusiness Framework eAcademy" },
+        { year: "2026", name: "Forage — Strategy Consulting Job Simulation (BCG)", org: "Chiffrage financier, recherche de marché, synthèse de recommandations" },
+        { year: "2024", name: "Forage — Introduction to Strategy Consulting (BCG)", org: "Remise en cause des modèles mentaux, structuration" },
+        { year: "2021", name: "Master en Management de projet", org: "Université de Douala" },
+        { year: "2019", name: "Licence Lettres bilingues, français-anglais", org: "Université de Douala" }
+      ]
+    },
+    cases: {
+      kicker: "Preuve de compétence",
+      title: "Études de cas",
+      sub: "Cinq cas structurés et chiffrés, dont plusieurs construits en préparation d'entretiens de type conseil en stratégie (structuration, chiffrage, cas business).",
+      seeDetail: "Voir le détail",
+      hideDetail: "Masquer le détail",
+      list: [
+        {
+          label: "Cas 1 · Business Case",
+          title: "Lancement d'un programme de micro-crédit mobile money",
+          result: "124 clients adressables sur 40 000 (0,3 %)",
+          tags: ["Business case (BABOK)", "Segmentation en entonnoir", "Synthèse top-down"],
+          context: "Un détaillant de taille moyenne à Douala, disposant d'une base de 40 000 clients fidèles (programme de fidélité), envisage de lancer un service de micro-crédit adossé au mobile money pour financer les achats de ses clients réguliers. La direction demande une estimation de la cible potentielle et une recommandation sur l'opportunité de lancer le programme.",
+          approach: "Analyse des parties prenantes (le détaillant, les clients, l'opérateur de mobile money partenaire), puis segmentation en entonnoir de la base de clients pour isoler la cible réellement adressable, en posant des hypothèses explicites à chaque étape plutôt que de traiter l'ensemble de la base comme cible potentielle.",
+          chips: [
+            { k: "Base de clients fidèles", v: "40 000" },
+            { k: "Clients réguliers (90 %)", v: "36 000" },
+            { k: "Usage du mobile money (23 %)", v: "8 280" },
+            { k: "Intérêt produit de crédit (30 %)", v: "2 484" },
+            { k: "Éligibilité de base (5 %)", v: "124 clients" }
+          ],
+          recommendation: "Ne pas lancer le programme immédiatement, mais le faire mûrir en complétant l'analyse par trois éléments manquants : le coût de mise en place, le revenu attendu par client et le taux de risque de défaut. Le principal risque identifié est d'investir dans un produit financier pour une cible potentiellement trop restreinte pour être rentable à court terme."
+        },
+        {
+          label: "Cas 2 · Market Sizing",
+          title: "Chiffre d'affaires des vendeuses de petit-déjeuner de rue à Douala",
+          result: "≈ 125,5 milliards de FCFA de marché annuel estimé",
+          tags: ["Market sizing bottom-up", "Hypothèses explicites", "Sanity-check externe"],
+          context: "Estimation du chiffre d'affaires annuel généré par les vendeuses de rue de beignets-haricots-bouillie, un petit-déjeuner de rue très répandu à Douala, à titre d'exercice de dimensionnement de marché (market sizing).",
+          approach: "Construction ascendante (bottom-up) du nombre de vendeuses par type de point de vente, sur l'ensemble des 6 communes de Douala, plutôt qu'une estimation globale non justifiée. Hypothèses de vente : 50 clients par jour en moyenne par vendeuse, prix moyen de 250 FCFA par plat, activité 7 jours sur 7.",
+          chips: [
+            { k: "Marchés", v: "5 000 vendeuses" },
+            { k: "Abords des écoles", v: "20 000 vendeuses" },
+            { k: "Carrefours", v: "2 000 vendeuses" },
+            { k: "Autres emplacements", v: "500 vendeuses" },
+            { k: "Total", v: "27 500 vendeuses" }
+          ],
+          calc: "CA journalier par vendeuse = 250 × 50 = 12 500 FCFA. CA journalier total = 12 500 × 27 500 = 343 750 000 FCFA. CA annuel = 343 750 000 × 365 ≈ 125,5 milliards de FCFA.",
+          sanity: "Rapporté à la population totale de Douala (environ 4 500 000 habitants), ce chiffre correspond à environ 27 900 FCFA dépensés par habitant et par an, soit environ 111 repas par personne et par an — un repas tous les trois jours en moyenne sur l'ensemble de la population. Un ordre de grandeur crédible pour un petit-déjeuner de rue bon marché et culturellement ancré, contrairement à une première estimation non vérifiée (100 000 vendeuses) qui aurait impliqué plus d'un repas par jour pour la totalité de la population — un résultat rejeté car implausible.",
+          recommendation: "Les beignets-haricots-bouillie constituent un segment de petit-déjeuner de rue économiquement significatif à Douala, avec un chiffre d'affaires annuel estimé à environ 125,5 milliards de FCFA sur la base d'hypothèses raisonnables et vérifiées contre un repère de plausibilité externe."
+        },
+        {
+          label: "Cas 3 · Data Analytics",
+          title: "Dashboard Power BI — production et ventes (NutriDash Cameroun)",
+          result: "45 M FCFA de marge brute pilotée sur 98 M FCFA de CA · 6 canaux · RLS 5 régions",
+          tags: ["Power Query & DAX avancé", "Row-Level Security", "Contribution absolue vs taux de marge"],
+          context: "Mission Power BI pour une PME camerounaise de production de bouillie infantile (juin-juillet 2026) : concevoir un tableau de bord pilotant l'activité sur 12 mois de données (2024), couvrant la fabrication, les ventes sur 6 canaux de distribution et la rentabilité par produit et par canal.",
+          approach: "Power Query (nettoyage et fusion de 3 tables sources CSV, colonnes calculées) ; modélisation en schéma en étoile avec table de dates générée en DAX natif (CALENDAR()) ; DAX avancé (SUMX, CALCULATE, DIVIDE, COUNTROWS, DISTINCTCOUNT) ; Power BI Service (workspace dédié, dashboard interactif multi-pages) ; Row-Level Security configurée par région (5 rôles — Centre, Littoral, Nord, Ouest, Sud). Trois défis techniques résolus : un bug de priorité des opérateurs en Power Query (([A]-[B])/[A] ≠ [A]-[B]/[A]), une erreur d'agrégation DAX (une somme appliquée directement sur des pourcentages, recalculée avec DIVIDE() à partir des totaux sous-jacents), et un axe temporel désordonné corrigé par une colonne Date dédiée en DAX pour un tri chronologique correct.",
+          chips: [
+            { k: "Unités produites", v: "130 000" },
+            { k: "Coût total de fabrication", v: "53 M FCFA" },
+            { k: "Taux de défaut", v: "3,70 %" },
+            { k: "CA (6 canaux)", v: "98 M FCFA" },
+            { k: "Marge brute globale", v: "45 M FCFA" }
+          ],
+          synthesis: "Une baisse de production de 35 % entre octobre et décembre constitue un signal d'alerte à traiter en priorité, car elle pourrait limiter la capacité à répondre à la demande des segments les plus rentables. Les céréales concentrent 35 % des coûts et la plus grosse part de la marge en valeur absolue (35,73 %) — mais ceci reflète surtout leur volume dominant (43K unités, la plus grosse catégorie), pas une meilleure rentabilité : leur taux de marge (~46 %) est comparable à celui des légumineuses et tubercules (~45 %), et inférieur à celui de la catégorie Enrichie (~50 %), la plus rentable proportionnellement bien que la plus petite en volume. Sur le plan commercial, le canal ONG partenaire génère la plus grosse marge en valeur absolue (22 M FCFA) mais affiche le taux de marge le plus faible de tous les canaux (~42 %, contre ~50 % pour Supermarché, Pharmacie, Clinique et Marché local, et ~100 % pour la Vente directe). L'entreprise est donc doublement exposée : une dépendance de revenu à un canal unique (53 % du CA) qui est en plus son canal le moins rentable proportionnellement.",
+          recommendation: "Maintenir le volume de céréales pour préserver le chiffre d'affaires, tout en testant une montée en volume de la gamme Enrichie, dont le potentiel de marge est sous-exploité. Diversifier activement vers Supermarché et Pharmacie — déjà performants en taux de marge — et étudier les conditions de mise à l'échelle de la Vente directe, aujourd'hui marginale en volume mais la plus rentable par FCFA vendu. Mettre en place un programme de fidélité ciblé sur les segments à fort taux de marge pour sécuriser ces relations avant toute réduction de la dépendance aux ONG partenaires."
+        },
+        {
+          label: "Cas 4 · Remise en cause d'hypothèses",
+          title: "Redéfinir un problème avant de le résoudre (cas des caisses de supermarché)",
+          result: "Hypothèse client invalidée avant tout chiffrage",
+          tags: ["Détection d'hypothèses implicites", "Causes alternatives", "Reformulation du problème"],
+          context: "Un client, une chaîne de supermarchés à Douala, signale : « Depuis 6 mois, nos clients passent moins de temps dans nos magasins qu'avant. Nous pensons qu'ils sont pressés — il faut accélérer le passage en caisse. Aidez-nous à déterminer combien de caisses supplémentaires ouvrir. » La demande contient une hypothèse non démontrée qu'il faut examiner avant de chiffrer quoi que ce soit.",
+          approach: "Le client empile deux hypothèses non prouvées : (1) moins de temps en magasin signifie que les clients sont pressés, et (2) la solution est nécessairement d'accélérer la caisse. Avant de chiffrer un nombre de caisses, il faut tester ces hypothèses et envisager des causes alternatives : un produit non trouvé en rayon, une file d'attente déjà si longue qu'elle pousse certains clients à repartir sans acheter (donc moins de temps en magasin pour une raison négative, pas neutre), ou encore — l'hypothèse la plus souvent oubliée — un temps réduit qui refléterait un parcours d'achat plus fluide et plus efficace, donc un signal positif plutôt qu'un problème.",
+          recommendation: "Reformulation : plutôt que « combien de caisses ouvrir ? », la vraie question à traiter est « le temps réduit passé en magasin est-il réellement corrélé à une baisse des ventes ou de la satisfaction client, et si oui, quels facteurs l'expliquent (produit non trouvé, attente, panier plus petit, montée de l'achat en ligne) ? ». Tant que cette corrélation n'est pas établie, investir dans des caisses supplémentaires n'est pas justifié."
+        },
+        {
+          label: "Cas 5 · Business Case M&A",
+          title: "Entrée sur le marché camerounais des jus de fruits (build vs. buy)",
+          result: "Objectif client ×76 corrigé à 600 M–1 Md FCFA (vs 15 Md FCFA annoncés)",
+          tags: ["Market sizing en cascade", "Normalisation de prix au litre", "Build vs buy"],
+          context: "Un client sans aucun actif au Cameroun souhaite entrer sur le marché des jus de fruits conditionnés. Objectif annoncé : 15 Md FCFA de chiffre d'affaires cumulés sur les deux premières années (2027-2028), avec un budget d'investissement de 499 M FCFA. Mission : structurer le marché, évaluer la stratégie d'entrée et tester la faisabilité de l'objectif avant de recommander une décision.",
+          approach: "Cadrage du marché en cascade plutôt qu'un chiffrage global non ventilé : taille totale, puis segmentation par type de produit, puis par canal de distribution, avant de confronter l'objectif du client à cette structure. Normalisation des prix concurrents au litre plutôt que par emballage (200 FCFA/200ml, 300 FCFA/200ml, 500 FCFA/300ml, 600 FCFA/1L, 500 FCFA/1L) : les petits formats se vendent 2 à 3 fois plus cher au litre (jusqu'à 1 667 FCFA/L) que les formats 1L (500-600 FCFA/L), révélant deux modèles économiques distincts — achat impulsif en circuit informel contre achat de stock ménage en circuit moderne — plutôt qu'une simple différence de conditionnement.",
+          chips: [
+            { k: "Marché total jus conditionnés (Cameroun)", v: "35 Md FCFA (+8 %/an)" },
+            { k: "Segment jus 100% fruit (40 %)", v: "14 Md FCFA" },
+            { k: "dont canal traditionnel (65 %)", v: "9,1 Md FCFA" },
+            { k: "dont canal moderne (35 %)", v: "4,9 Md FCFA" },
+            { k: "CA cible de rachat (Lunifoods)", v: "98 M FCFA" }
+          ],
+          recommendation: "Test de cohérence de l'objectif client contre la structure du marché : 15 Md FCFA cumulés impliquent une part de marché moyenne de ~48 % sur deux ans pour un entrant sans aucun actif, soit un facteur ×76 par rapport au chiffre d'affaires actuel de la cible de rachat identifiée (Lunifoods, 98 M FCFA) — intenable en croissance organique, et hors de portée du budget de 499 M FCFA alloué. Recommandation : procéder au rachat de Lunifoods, dont les pénuries régulières signalent une demande latente non servie par une contrainte de production plutôt que par un déficit de notoriété — un point d'entrée plus rapide qu'une construction de marque à partir de zéro. Ramener l'objectif de CA cumulé de 15 Md à une fourchette réaliste de 600 M à 1 Md FCFA sur 2027-2028. Risque principal à sécuriser en amont : la répartition exacte du budget de 499 M entre prix de rachat et capex de production."
+        }
+      ]
+    },
+    star: {
+      kicker: "Expériences marquantes",
+      title: "Trois histoires, format STAR",
+      seeDetail: "Voir le détail",
+      hideDetail: "Masquer le détail",
+      list: [
+        {
+          cat: "Personal Impact",
+          title: "Transformer un contrat d'exécution en relation de conseil récurrente",
+          result: "2 860 000 FCFA générés à ce jour",
+          situation: "En 2025, l'entreprise (HOODO) traverse des tensions de trésorerie, avec une équipe commerciale réduite à deux personnes. Un client, spécialisé dans la construction et la maintenance de piscines au Cameroun et en Afrique centrale, avait un contrat limité à la conception d'un site web.",
+          action: "De sa propre initiative, sans qu'on le lui demande, Luc identifie une opportunité d'accompagnement digital plus large pour ce client (stratégie de communication et marketing digital), chiffre une proposition et la présente lui-même à sa hiérarchie : 1 900 000 FCFA.",
+          resultText: "Le client accepte la proposition. L'accompagnement est renouvelé deux fois (480 000 FCFA chacun), pour un total généré à ce jour de 2 860 000 FCFA. Luc pilote personnellement la stratégie de communication digitale du client, produit des rapports réguliers, et est désormais consulté sur toutes les décisions stratégiques marketing du client — une relation toujours active.",
+          takeaway: "Une opportunité que personne n'avait demandé de chercher peut transformer un contrat d'exécution ponctuel en relation de conseil récurrente et durable."
+        },
+        {
+          cat: "Entrepreneurial Drive",
+          title: "Créer une nouvelle ligne de revenu à partir d'une compétence dormante",
+          result: "720 000 FCFA générés, 12 professionnels formés",
+          situation: "En 2025, HOODO traverse des tensions de trésorerie ; l'équipe commerciale ne clôture pas suffisamment de ventes pour les résorber.",
+          action: "Luc possède des compétences en Power BI sans lien avec son rôle commercial. De sa propre initiative, il conçoit un programme de formation complet et gère lui-même des campagnes publicitaires Meta pour générer des prospects pour ce programme, qu'il crée seul de A à Z.",
+          resultText: "12 professionnels sont formés chez HOODO, chacun payant 60 000 FCFA (50 000 formation + 10 000 abonnement), générant 720 000 FCFA pour l'entreprise et réduisant directement la pression de trésorerie. La réputation de l'initiative dépasse HOODO : en tant que membre de l'IIBA, Luc la mentionne au chapitre IIBA Cameroun, qui lui confie une session de formation bénévole auprès de 10 professionnels supplémentaires — une validation externe de la même initiative.",
+          takeaway: "Une compétence dormante peut devenir une nouvelle ligne de revenu, avec suffisamment de crédibilité pour être sollicité par un organisme professionnel externe."
+        },
+        {
+          cat: "Inclusive Leadership",
+          title: "Faire progresser les participants les plus en difficulté sans ralentir le groupe",
+          result: "3/3 participantes en difficulté reçues à l'évaluation finale",
+          situation: "En mai 2026, Fabrice Yakam, représentant de VESTIGE Cameroun, sollicite Luc pour former 15 personnes (23 à 43 ans) au marketing digital (Facebook, WhatsApp Business, création de contenu par IA), à raison de 3 sessions par semaine sur 8 séances. En cours de formation, Luc identifie que 3 participantes, parmi les plus âgées, prennent du retard — moins familiarisées avec les outils numériques que le reste du groupe — et se sentent mises à l'écart, alors que la majorité du groupe souhaite avancer au rythme normal.",
+          action: "Plutôt que de ralentir tout le groupe ou d'organiser une session de rattrapage formelle (sans budget ni temps disponible pour cela), Luc met en place deux mécanismes parallèles à coût nul : il invite les participants qui ont bien compris à expliquer à leur voisine (peer-teaching intégré au rythme normal de la salle), et il ouvre un canal dédié (groupe WhatsApp et messages personnels) où les 3 participantes peuvent poser leurs questions sans exposition devant le groupe, avec une réponse individuelle à chaque sollicitation.",
+          resultText: "Les 3 participantes réussissent toutes leur évaluation finale (35/50, 47/50 et 30/50). Deux d'entre elles continuent, depuis, à envoyer à Luc des captures de leurs propres campagnes Facebook pour validation ; une troisième a demandé une session de renforcement supplémentaire malgré sa réussite, signe d'un engagement continu. Fabrice Yakam a donné un retour positif explicite sur la pédagogie de Luc : patience, écoute active, grande réactivité.",
+          takeaway: "L'inclusion ne consiste pas à ralentir tout le groupe pour attendre les plus en difficulté, mais à construire des mécanismes parallèles à coût nul qui permettent à chacun d'avancer à son rythme sans sacrifier le rythme collectif."
+        }
+      ]
+    },
+    beyond: {
+      kicker: "Au-delà du travail",
+      line1: "Curieux de nature : j'aime pousser un sujet jusqu'au bout et partager ce que j'en retiens — Power BI, chapitre IIBA Cameroun, écriture.",
+      line2: "Lecteur de pensée critique et de romans (Alain Mabanckou en tête) ; auteur en 2024 d'un premier roman jeunesse auto-édité, « Mon fils Kamo et l'illusion de l'intelligence artificielle ». Papa d'une merveilleuse fille."
+    },
+    contact: {
+      kicker: "Disponibilité immédiate",
+      title: "Parlons de votre besoin",
+      sub: "Pas de formulaire, pas d'étape supplémentaire — un email ou un appel suffit.",
+      ctaEmail: "M'écrire",
+      ctaCall: "M'appeler",
+      phone: "Téléphone",
+      email: "Email",
+      avail: "Disponibilité",
+      availVal: "Immédiate",
+      place: "Lieu préféré",
+      placeVal: "Hybride",
+      langs: "Langues",
+      langsVal: "Français (natif), Anglais (B1)"
+    },
+    sticky: {
+      text: "Un profil qui combine terrain, data et IA appliquée. <strong>Discutons-en.</strong>",
+      call: "Appeler",
+      email: "Écrire un email"
+    },
+    footer: { text: "Luc Arnauld Tienoue Kamologne — Douala, Cameroun" }
+  },
+
+  en: {
+    doc: {
+      title: "Luc Arnauld Tienoue Kamologne — Business Analyst · Data & Strategy",
+      description: "Independent consultant based in Douala, Cameroon — Business Analyst focused on data & strategy. 20+ professionals trained, 180 companies prospected B2B, 125,5 Md FCFA market sized."
+    },
+    topbarContact: "Get in touch",
+    hero: {
+      eyebrow: "Independent Consultant · Douala, Cameroon",
+      role: "Business Analyst — Data &amp; Problem Structuring",
+      value: "<strong>20+ professionals trained</strong>, <strong>125,5 Md FCFA</strong> market sized, case structuring under <strong>90 seconds</strong>.",
+      ctaContact: "Get in touch",
+      cvLabel: "Download my CV",
+      cvFr: "French version",
+      cvEn: "English version",
+      photoCaption: "Douala, Cameroon"
+    },
+    stats: {
+      s1: "professionals trained in Excel / Power BI",
+      s2: "companies prospected B2B",
+      s3: "quantified business cases — market, M&amp;A, data analytics",
+      s4: "Certified in AI Fluency Framework &amp; Foundations (2026)"
+    },
+    why: {
+      kicker: "Differentiation",
+      title: "Why me",
+      sub: "Five proof points already on this site, not adjectives — each block reads in under 8 seconds.",
+      items: [
+        { title: "Field AND data — rarely both at once", proof: "180 companies prospected B2B, plus Power BI/DAX dashboards built and shipped in production: most Business Analyst profiles have one or the other, rarely hands-on practice of both." },
+        { title: "Certified in applied AI ahead of the curve", proof: "3 Anthropic Academy certifications earned in 2026 (AI Fluency: Framework & Foundations, Teaching the AI Fluency Framework, AI Fluency for Nonprofits): a demonstrated ability to embed AI into analysis and training, not just talk about it in an interview." },
+        { title: "Initiative that's documented, not just claimed", proof: "Two quantified cases of value created without being asked: an execution-only contract turned into a recurring advisory engagement (2 860 000 FCFA generated to date), and an internal training programme built solo during a cash-flow crunch (720 000 FCFA generated, 12 professionals trained)." },
+        { title: "Analytical rigor shown on real cases, not just claimed", proof: "Systematic sanity-checks across the 5 business cases in this portfolio, a clear distinction between absolute contribution and margin rate, and a quantified challenge to an unrealistic client target (×76) instead of a default rubber stamp." },
+        { title: "A natural teacher", proof: "30+ professionals trained to date (HOODO, IIBA Cameroon, VESTIGE Cameroon): the ability to make technical subjects clear for non-technical decision-makers — a skill that transfers directly to presenting recommendations." }
+      ]
+    },
+    skills: {
+      kicker: "Skills",
+      title: "Core skills",
+      note: "English — B1 (intermediate), actively improving through certifications. No overstatement here: this level is easy to verify in a live conversation.",
+      items: [
+        { title: "Problem structuring", desc: "Issue trees, MECE, profitability framework (Revenue = Price × Volume; Costs = Fixed + Variable)." },
+        { title: "Sizing & estimation", desc: "Time-boxed market sizing, with systematic sanity-checking of every result." },
+        { title: "Advanced Power BI & Excel", desc: "Dashboard design, DAX, KPI reporting." },
+        { title: "Applied AI", desc: "Claude / Anthropic AI Fluency Framework, task automation, responsible-AI training for NGOs (data protection, M&E)." },
+        { title: "B2B business development", desc: "Prospecting, key account management, client relationships." },
+        { title: "Bilingual communication", desc: "French (native) · English — B1, intermediate, actively improving." }
+      ]
+    },
+    exp: {
+      kicker: "Background",
+      title: "Professional background",
+      items: [
+        { date: "06/2025 — Present", role: "B2B Sales Representative &amp; Analyst", org: "HOODO SARL", bullets: ["Sales KPI dashboards (Excel/Power BI)", "Trained 20+ professionals in Excel/Power BI", "Managed key accounts"], tag: null },
+        { date: "06/2025 — Present", role: "Excel / Power BI Trainer (internal)", org: "HOODO SARL", bullets: ["Trained 20+ professionals in advanced Excel and Power BI for business use (internal capacity-building)"], tag: "Advisory engagement" },
+        { date: "04/2024 — 09/2024", role: "Vice-President", org: "SDJ Association", bullets: ["Coordinated educational projects", "Designed AI/digital training modules for youth", "M&E reporting"], tag: null },
+        { date: "02/2023 — 03/2024", role: "Technical Sales Representative", org: "HOODO Consulting", bullets: ["Prospected 180 companies", "Produced 300+ digital content pieces", "Trained teams on new digital workflows"], tag: null },
+        { date: "06/2023 — 11/2023", role: "Digital Consultant &amp; Business Analyst", org: "BF Tech SARL", bullets: ["Marketing funnel analysis", "Strategic optimization recommendations", "Performance reporting"], tag: null },
+        { date: "09/2022 — 12/2023", role: "Intern / Education Assistant", org: "Plan International Cameroon", bullets: ["Collected and structured beneficiary data", "French–English translation during needs assessments"], tag: null }
+      ]
+    },
+    edu: {
+      kicker: "Education",
+      title: "Education &amp; certifications",
+      badgeHead: "Anthropic Academy certifications — 2026",
+      otherHead: "Other training &amp; degrees",
+      badges: [
+        { title: "AI Fluency: Framework &amp; Foundations", org: "Anthropic Academy (UCC / Ringling College)" },
+        { title: "Teaching the AI Fluency Framework", org: "Anthropic Academy" },
+        { title: "AI Fluency for Nonprofits", org: "Anthropic Academy × GivingTuesday" }
+      ],
+      other: [
+        { year: "2026", name: "Climate-Smart Agribusiness: Adaptation (CSA2)", org: "GIZ Agribusiness Framework eAcademy" },
+        { year: "2026", name: "Building an Investment-Ready Agribusiness", org: "GIZ Agribusiness Framework eAcademy" },
+        { year: "2026", name: "Business Models for Agri-Food Enterprises", org: "GIZ Agribusiness Framework eAcademy" },
+        { year: "2026", name: "Forage — Strategy Consulting Job Simulation (BCG)", org: "Financial modeling, market research, summarizing findings" },
+        { year: "2024", name: "Forage — Introduction to Strategy Consulting (BCG)", org: "Challenging mental models, structuring" },
+        { year: "2021", name: "Master's in Project Management", org: "University of Douala" },
+        { year: "2019", name: "Bachelor's in Bilingual Letters, French-English", org: "University of Douala" }
+      ]
+    },
+    cases: {
+      kicker: "Proof of skill",
+      title: "Case studies",
+      sub: "Five structured, quantified cases — several built while preparing for strategy-consulting-style interviews (structuring, sizing, business cases).",
+      seeDetail: "See detail",
+      hideDetail: "Hide detail",
+      list: [
+        {
+          label: "Case 1 · Business Case",
+          title: "Launching a mobile-money micro-credit programme",
+          result: "124 addressable clients out of 40 000 (0.3%)",
+          tags: ["Business case (BABOK)", "Funnel segmentation", "Top-down synthesis"],
+          context: "A mid-sized Douala retailer with a loyalty base of 40 000 customers is considering launching a mobile-money-backed micro-credit service to finance purchases by its regular customers. Management asked for an estimate of the addressable target and a recommendation on whether to launch.",
+          approach: "Stakeholder analysis (the retailer, its customers, the partner mobile-money operator), then a funnel segmentation of the customer base to isolate the truly addressable target — with explicit assumptions at each step, instead of treating the whole base as a potential target.",
+          chips: [
+            { k: "Loyal customer base", v: "40 000" },
+            { k: "Regular customers (90%)", v: "36 000" },
+            { k: "Mobile money usage (23%)", v: "8 280" },
+            { k: "Interest in credit product (30%)", v: "2 484" },
+            { k: "Base eligibility (5%)", v: "124 clients" }
+          ],
+          recommendation: "Don't launch the programme immediately — let it mature by completing the analysis with three missing pieces: set-up cost, expected revenue per client, and default risk rate. The main risk identified is investing in a financial product for a target that may be too small to be profitable in the short term."
+        },
+        {
+          label: "Case 2 · Market Sizing",
+          title: "Revenue of street breakfast vendors in Douala",
+          result: "≈ 125,5 billion FCFA in estimated annual market size",
+          tags: ["Bottom-up market sizing", "Explicit assumptions", "External sanity-check"],
+          context: "Estimating the annual revenue generated by street vendors of beignets-haricots-bouillie, a very common street breakfast in Douala, as a market-sizing exercise.",
+          approach: "Bottom-up build of the number of vendors by point-of-sale type, across all 6 districts of Douala, rather than an unjustified top-down guess. Sales assumptions: 50 customers a day on average per vendor, average price of 250 FCFA per plate, active 7 days a week.",
+          chips: [
+            { k: "Markets", v: "5 000 vendors" },
+            { k: "Around schools", v: "20 000 vendors" },
+            { k: "Intersections", v: "2 000 vendors" },
+            { k: "Other locations", v: "500 vendors" },
+            { k: "Total", v: "27 500 vendors" }
+          ],
+          calc: "Daily revenue per vendor = 250 × 50 = 12 500 FCFA. Total daily revenue = 12 500 × 27 500 = 343 750 000 FCFA. Annual revenue = 343 750 000 × 365 ≈ 125,5 milliards de FCFA.",
+          sanity: "Against Douala's total population (around 4 500 000 people), this figure works out to about 27 900 FCFA spent per capita per year — roughly 111 meals per person per year, or one meal every three days on average across the entire population. A credible order of magnitude for a cheap, culturally entrenched street breakfast, unlike an earlier unverified estimate (100 000 vendors) that would have implied more than one meal per day for the entire population — a result rejected as implausible.",
+          recommendation: "Beignets-haricots-bouillie make up an economically significant street-breakfast segment in Douala, with annual revenue estimated at around 125,5 milliards de FCFA based on reasonable assumptions cross-checked against an external plausibility benchmark."
+        },
+        {
+          label: "Case 3 · Data Analytics",
+          title: "Power BI dashboard — production &amp; sales (NutriDash Cameroon)",
+          result: "45 M FCFA gross margin tracked on 98 M FCFA revenue · 6 channels · RLS across 5 regions",
+          tags: ["Advanced Power Query & DAX", "Row-Level Security", "Absolute contribution vs margin rate"],
+          context: "A Power BI engagement for a Cameroonian SME producing infant porridge (June-July 2026): design a dashboard tracking 12 months of data (2024) across manufacturing, sales across 6 distribution channels, and profitability by product and channel.",
+          approach: "Power Query (cleaning and merging 3 source CSV tables, calculated columns); star-schema modeling with a date table generated in native DAX (CALENDAR()); advanced DAX (SUMX, CALCULATE, DIVIDE, COUNTROWS, DISTINCTCOUNT); Power BI Service (dedicated workspace, interactive multi-page dashboard); Row-Level Security configured by region (5 roles — Centre, Littoral, Nord, Ouest, Sud). Three technical issues solved: an operator-precedence bug in Power Query (([A]-[B])/[A] ≠ [A]-[B]/[A]), a DAX aggregation error (a SUM applied directly to percentages, recalculated with DIVIDE() from the underlying totals), and a disordered time axis fixed with a dedicated Date column built in DAX for correct chronological sorting.",
+          chips: [
+            { k: "Units produced", v: "130 000" },
+            { k: "Total manufacturing cost", v: "53 M FCFA" },
+            { k: "Defect rate", v: "3.70%" },
+            { k: "Revenue (6 channels)", v: "98 M FCFA" },
+            { k: "Overall gross margin", v: "45 M FCFA" }
+          ],
+          synthesis: "A 35% drop in production between October and December is a warning signal that should be addressed first, as it could limit the ability to meet demand from the most profitable segments. Cereals account for 35% of costs and the largest share of margin in absolute terms (35.73%) — but this mostly reflects their dominant volume (43K units, the largest category), not better profitability: their margin rate (~46%) is comparable to legumes and tubers (~45%) and lower than the Enriched category (~50%), the most profitable proportionally despite being the smallest by volume. Commercially, the partner-NGO channel generates the largest margin in absolute terms (22 M FCFA) but has the lowest margin rate of all channels (~42%, versus ~50% for Supermarket, Pharmacy, Clinic and Local Market, and ~100% for Direct Sales). The company is therefore doubly exposed: revenue dependency on a single channel (53% of revenue) that is also its least profitable channel proportionally.",
+          recommendation: "Maintain cereal volume to preserve revenue, while testing a volume increase for the Enriched range, whose margin potential is under-exploited. Actively diversify into Supermarket and Pharmacy — already strong on margin rate — and study the conditions for scaling Direct Sales, currently marginal in volume but the most profitable per FCFA sold. Set up a loyalty programme targeted at high-margin-rate segments to secure those relationships before reducing dependency on partner NGOs."
+        },
+        {
+          label: "Case 4 · Challenging assumptions",
+          title: "Reframing a problem before solving it (the supermarket checkout case)",
+          result: "Client's assumption invalidated before any number was run",
+          tags: ["Implicit-assumption detection", "Alternative causes", "Problem reframing"],
+          context: "A client, a Douala supermarket chain, reports: \"For 6 months, our customers have been spending less time in our stores than before. We think they're in a hurry — we need to speed up checkout. Help us determine how many additional checkout counters to open.\" The request contains an unproven assumption that needs examining before any number gets run.",
+          approach: "The client stacks two unproven assumptions: (1) less time in-store means customers are in a hurry, and (2) the solution is necessarily to speed up checkout. Before sizing a number of checkout counters, these assumptions need testing, and alternative causes need considering: a product not found on the shelf, a queue already so long it pushes some customers to leave without buying (so less time in-store for a negative reason, not a neutral one), or — the most commonly overlooked hypothesis — reduced time reflecting a smoother, more efficient shopping journey, i.e. a positive signal rather than a problem.",
+          recommendation: "Reframing: rather than \"how many checkout counters should we open?\", the real question to address is \"is reduced time in-store actually correlated with lower sales or satisfaction, and if so, which factors explain it (product not found, waiting, smaller basket, rise of online purchases)?\". Until that correlation is established, investing in additional checkout counters isn't justified."
+        },
+        {
+          label: "Case 5 · M&A Business Case",
+          title: "Entering the Cameroonian fruit juice market (build vs. buy)",
+          result: "Client's ×76 target corrected to 600 M–1 Md FCFA (vs the announced 15 Md FCFA)",
+          tags: ["Cascading market sizing", "Per-liter price normalization", "Build vs buy"],
+          context: "A client with no assets in Cameroon wants to enter the packaged fruit-juice market. Stated goal: 15 Md FCFA in cumulative revenue over the first two years (2027-2028), with a 499 M FCFA investment budget. Mission: structure the market, assess the entry strategy, and stress-test the target's feasibility before recommending a decision.",
+          approach: "Cascading market framing rather than a single unbroken top-down number: total size, then segmentation by product type, then by distribution channel, before confronting the client's target against that structure. Normalizing competitor prices per liter rather than per package (200 FCFA/200ml, 300 FCFA/200ml, 500 FCFA/300ml, 600 FCFA/1L, 500 FCFA/1L): small formats sell 2 to 3 times more expensive per liter (up to 1 667 FCFA/L) than 1L formats (500-600 FCFA/L), revealing two distinct economic models — impulse buying in the informal channel versus household-stock buying in the modern channel — rather than a simple packaging difference.",
+          chips: [
+            { k: "Total packaged-juice market (Cameroon)", v: "35 Md FCFA (+8%/yr)" },
+            { k: "100%-fruit-juice segment (40%)", v: "14 Md FCFA" },
+            { k: "of which traditional channel (65%)", v: "9,1 Md FCFA" },
+            { k: "of which modern channel (35%)", v: "4,9 Md FCFA" },
+            { k: "Acquisition target revenue (Lunifoods)", v: "98 M FCFA" }
+          ],
+          recommendation: "Consistency test of the client's target against market structure: 15 Md FCFA cumulative implies an average market share of ~48% over two years for an entrant with zero existing assets — a ×76 factor versus the current revenue of the identified acquisition target (Lunifoods, 98 M FCFA) — untenable through organic growth, and beyond the reach of the allocated 499 M FCFA budget. Recommendation: proceed with acquiring Lunifoods, whose recurring shortages signal latent unmet demand driven by a production constraint rather than a brand-awareness gap — a faster entry point than building a brand from scratch. Bring the cumulative revenue target down from 15 Md to a realistic range of 600 M to 1 Md FCFA over 2027-2028. Key risk to de-risk upfront: the exact split of the 499 M budget between acquisition price and production capex."
+        }
+      ]
+    },
+    star: {
+      kicker: "Signature experiences",
+      title: "Three stories, STAR format",
+      seeDetail: "See detail",
+      hideDetail: "Hide detail",
+      list: [
+        {
+          cat: "Personal Impact",
+          title: "Turning an execution-only contract into a recurring advisory relationship",
+          result: "2 860 000 FCFA generated to date",
+          situation: "In 2025, the company (HOODO) was going through a cash-flow crunch, with a sales team reduced to two people. A client specializing in pool construction and maintenance in Cameroon and Central Africa had a contract limited to building a website.",
+          action: "On his own initiative, without being asked, Luc identified a broader digital-support opportunity for this client (communication strategy and digital marketing), sized a proposal, and pitched it himself to leadership: 1 900 000 FCFA.",
+          resultText: "The client accepted the proposal. The engagement was renewed twice (480 000 FCFA each), for a total of 2 860 000 FCFA generated to date. Luc personally runs the client's digital communication strategy, produces regular reports, and is now consulted on all of the client's strategic marketing decisions — a relationship that remains active.",
+          takeaway: "An opportunity nobody asked to be found can turn a one-off execution contract into a durable, recurring advisory relationship."
+        },
+        {
+          cat: "Entrepreneurial Drive",
+          title: "Creating a new revenue line from a dormant skill",
+          result: "720 000 FCFA generated, 12 professionals trained",
+          situation: "In 2025, HOODO was going through a cash-flow crunch; the sales team wasn't closing enough deals to relieve it.",
+          action: "Luc had Power BI skills unrelated to his sales role. On his own initiative, he designed a complete training programme and personally ran Meta ad campaigns to generate leads for it, building the whole thing solo from scratch.",
+          resultText: "12 professionals were trained at HOODO, each paying 60 000 FCFA (50 000 for training + 10 000 subscription), generating 720 000 FCFA for the company and directly easing cash-flow pressure. The initiative's reputation spread beyond HOODO: as an IIBA member, Luc mentioned it to the IIBA Cameroon chapter, which entrusted him with a volunteer training session for 10 additional professionals — external validation of the same initiative.",
+          takeaway: "A dormant skill can become a new revenue line, credible enough to be sought out by an external professional body."
+        },
+        {
+          cat: "Inclusive Leadership",
+          title: "Helping the most struggling participants catch up without slowing the group",
+          result: "3/3 struggling participants passed the final assessment",
+          situation: "In May 2026, Fabrice Yakam, representing VESTIGE Cameroon, asked Luc to train 15 people (aged 23 to 43) in digital marketing (Facebook, WhatsApp Business, AI-assisted content creation), across 3 sessions a week over 8 sessions. Partway through training, Luc noticed that 3 of the older participants were falling behind — less familiar with digital tools than the rest of the group — and felt sidelined, while the majority wanted to keep moving at the normal pace.",
+          action: "Rather than slow the whole group down or organize a formal catch-up session (with no budget or time available for one), Luc set up two zero-cost parallel mechanisms: he invited participants who had understood well to explain to their neighbor (peer-teaching built into the room's normal pace), and he opened a dedicated channel (a WhatsApp group and personal messages) where the 3 participants could ask questions without exposure in front of the group, with an individual reply to every question.",
+          resultText: "All 3 participants passed their final assessment (35/50, 47/50 and 30/50). Two of them still send Luc screenshots of their own Facebook campaigns for review; a third requested an extra reinforcement session despite passing, a sign of continued engagement. Fabrice Yakam gave explicit positive feedback on Luc's teaching: patience, active listening, high responsiveness.",
+          takeaway: "Inclusion isn't about slowing the whole group down to wait for those struggling most — it's about building zero-cost parallel mechanisms that let everyone move at their own pace without sacrificing the group's overall pace."
+        }
+      ]
+    },
+    beyond: {
+      kicker: "Beyond work",
+      line1: "Naturally curious: I follow a subject all the way through and share what I learn from it — Power BI training, the IIBA Cameroon chapter, writing.",
+      line2: "I read critical thinking and novels (Alain Mabanckou especially); in 2024 I self-published my first novel, « Mon fils Kamo et l'illusion de l'intelligence artificielle » (\"My son Kamo and the illusion of artificial intelligence\"). Proud dad of a wonderful daughter."
+    },
+    contact: {
+      kicker: "Immediately available",
+      title: "Let's talk about your need",
+      sub: "No form, no extra step — an email or a call is enough.",
+      ctaEmail: "Email me",
+      ctaCall: "Call me",
+      phone: "Phone",
+      email: "Email",
+      avail: "Availability",
+      availVal: "Immediate",
+      place: "Preferred setup",
+      placeVal: "Hybrid",
+      langs: "Languages",
+      langsVal: "French (native), English (B1)"
+    },
+    sticky: {
+      text: "A profile combining field, data, and applied AI. <strong>Let's talk.</strong>",
+      call: "Call",
+      email: "Send an email"
+    },
+    footer: { text: "Luc Arnauld Tienoue Kamologne — Douala, Cameroon" }
+  }
+};
+
+/* ---------------------------------------------------------------------- */
+
+var STATE = { lang: "fr" };
+
+function detectLang(){
+  var nav = (navigator.language || navigator.userLanguage || "en").toLowerCase();
+  return nav.indexOf("fr") === 0 ? "fr" : "en";
+}
+
+function t(lang){ return I18N[lang]; }
+
+function esc(s){
+  return String(s).replace(/[&<>"']/g, function(c){
+    return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c];
+  });
+}
+
+function renderWhy(lang){
+  var d = t(lang).why;
+  var el = document.getElementById("why-grid");
+  el.innerHTML = d.items.map(function(item, i){
+    return '<div class="why-card"><div class="why-index">0'+(i+1)+'</div>' +
+      '<div class="why-title">'+esc(item.title)+'</div>' +
+      '<div class="why-proof">'+esc(item.proof)+'</div></div>';
+  }).join("");
+}
+
+function renderSkills(lang){
+  var d = t(lang).skills;
+  var el = document.getElementById("skills-grid");
+  el.innerHTML = d.items.map(function(item){
+    return '<div class="skill-card"><div class="skill-title">'+esc(item.title)+'</div>' +
+      '<div class="skill-desc">'+esc(item.desc)+'</div></div>';
+  }).join("");
+}
+
+function renderTimeline(lang){
+  var d = t(lang).exp;
+  var el = document.getElementById("timeline");
+  el.innerHTML = d.items.map(function(item){
+    var tag = item.tag ? '<span class="tl-tag">'+esc(item.tag)+'</span>' : "";
+    var bullets = item.bullets.map(function(b){ return '<li>'+esc(b)+'</li>'; }).join("");
+    return '<div class="tl-item"><div class="tl-date">'+esc(item.date)+'</div><div class="tl-rule"></div>' +
+      '<div><div class="tl-role">'+item.role+'</div><div class="tl-org">'+esc(item.org)+'</div>' +
+      '<ul class="tl-bullets">'+bullets+'</ul>'+tag+'</div></div>';
+  }).join("");
+}
+
+function renderEducation(lang){
+  var d = t(lang).edu;
+  var badgeRow = document.getElementById("badge-row");
+  badgeRow.innerHTML = d.badges.map(function(b, i){
+    return '<div class="badge"><div class="badge-mark">A'+(i+1)+'</div>' +
+      '<div><div class="badge-title">'+b.title+'</div><div class="badge-org">'+esc(b.org)+'</div></div></div>';
+  }).join("");
+  var eduList = document.getElementById("edu-list");
+  eduList.innerHTML = d.other.map(function(item){
+    return '<div class="edu-item"><div class="edu-year">'+esc(item.year)+'</div>' +
+      '<div><div class="edu-name">'+esc(item.name)+'</div><div class="edu-org">'+esc(item.org)+'</div></div></div>';
+  }).join("");
+}
+
+function chipsHtml(chips){
+  if(!chips) return "";
+  return '<div class="data-chips">'+chips.map(function(c){
+    return '<div class="data-chip"><span class="k">'+esc(c.k)+'</span><span class="v">'+esc(c.v)+'</span></div>';
+  }).join("")+'</div>';
+}
+
+function renderCases(lang){
+  var d = t(lang).cases;
+  var el = document.getElementById("cases-list");
+  el.innerHTML = d.list.map(function(c, i){
+    var blocks = "";
+    blocks += '<div class="case-block"><div class="case-block-label">'+ (lang==="fr"?"Contexte":"Context") +'</div><p>'+esc(c.context)+'</p></div>';
+    blocks += '<div class="case-block"><div class="case-block-label">'+ (lang==="fr"?"Approche":"Approach") +'</div><p>'+esc(c.approach)+'</p>'+chipsHtml(c.chips)+'</div>';
+    if(c.calc){ blocks += '<div class="case-block"><div class="case-block-label">'+ (lang==="fr"?"Calcul":"Calculation") +'</div><p>'+esc(c.calc)+'</p></div>'; }
+    if(c.sanity){ blocks += '<div class="case-block"><div class="case-block-label">'+ (lang==="fr"?"Validation (sanity-check)":"Validation (sanity-check)") +'</div><p>'+esc(c.sanity)+'</p></div>'; }
+    if(c.synthesis){ blocks += '<div class="case-block"><div class="case-block-label">'+ (lang==="fr"?"Synthèse analytique":"Analytical synthesis") +'</div><p>'+esc(c.synthesis)+'</p></div>'; }
+    blocks += '<div class="case-block"><div class="case-block-label">'+ (lang==="fr"?"Recommandation":"Recommendation") +'</div><p>'+esc(c.recommendation)+'</p></div>';
+    var tags = c.tags.map(function(tg){ return '<span class="case-tag">'+esc(tg)+'</span>'; }).join("");
+    return '<div class="case-card" data-open="false" data-idx="'+i+'">' +
+      '<div class="case-head">' +
+        '<div class="case-top"><div><div class="case-label">'+esc(c.label)+'</div><h3 class="case-title">'+esc(c.title)+'</h3></div></div>' +
+        '<div class="case-result">'+esc(c.result)+'</div>' +
+        '<div class="case-tags">'+tags+'</div>' +
+        '<button type="button" class="case-toggle" data-case-toggle="'+i+'" aria-expanded="false">' +
+          '<span class="toggle-label">'+esc(d.seeDetail)+'</span><span class="chevron">▾</span></button>' +
+      '</div>' +
+      '<div class="case-body"><div class="case-body-inner">'+blocks+'</div></div>' +
+    '</div>';
+  }).join("");
+
+  Array.prototype.forEach.call(el.querySelectorAll("[data-case-toggle]"), function(btn){
+    btn.addEventListener("click", function(){
+      var card = btn.closest(".case-card");
+      var open = card.getAttribute("data-open") === "true";
+      setCaseOpen(card, btn, !open, lang);
+    });
+  });
+}
+
+function setCaseOpen(card, btn, open, lang){
+  var d = t(lang).cases;
+  card.setAttribute("data-open", open ? "true" : "false");
+  btn.setAttribute("aria-expanded", open ? "true" : "false");
+  btn.querySelector(".toggle-label").textContent = open ? d.hideDetail : d.seeDetail;
+  var body = card.querySelector(".case-body");
+  if(open){
+    body.style.maxHeight = body.scrollHeight + "px";
+  } else {
+    body.style.maxHeight = "0px";
+  }
+}
+
+function renderStar(lang){
+  var d = t(lang).star;
+  var el = document.getElementById("star-list");
+  el.innerHTML = d.list.map(function(s, i){
+    var body = '<div class="star-block"><div class="star-block-label">Situation</div><p>'+esc(s.situation)+'</p></div>' +
+      '<div class="star-block"><div class="star-block-label">'+ (lang==="fr"?"Action":"Action") +'</div><p>'+esc(s.action)+'</p></div>' +
+      '<div class="star-block"><div class="star-block-label">'+ (lang==="fr"?"Résultat":"Result") +'</div><p>'+esc(s.resultText)+'</p></div>' +
+      '<div class="star-block"><div class="star-block-label">'+ (lang==="fr"?"Ce qu'il en retient":"What he takes from it") +'</div><p>'+esc(s.takeaway)+'</p></div>';
+    return '<div class="star-card" data-open="false" data-idx="'+i+'">' +
+      '<div class="star-cat">'+esc(s.cat)+'</div>' +
+      '<div class="star-title">'+esc(s.title)+'</div>' +
+      '<div class="star-result">'+esc(s.result)+'</div>' +
+      '<button type="button" class="star-toggle" data-star-toggle="'+i+'" aria-expanded="false">'+esc(d.seeDetail)+'</button>' +
+      '<div class="star-body">'+body+'</div>' +
+    '</div>';
+  }).join("");
+
+  Array.prototype.forEach.call(el.querySelectorAll("[data-star-toggle]"), function(btn){
+    btn.addEventListener("click", function(){
+      var card = btn.closest(".star-card");
+      var open = card.getAttribute("data-open") === "true";
+      card.setAttribute("data-open", open ? "false" : "true");
+      btn.setAttribute("aria-expanded", open ? "false" : "true");
+      btn.textContent = open ? d.seeDetail : d.hideDetail;
+      var body = card.querySelector(".star-body");
+      body.style.maxHeight = open ? "0px" : body.scrollHeight + "px";
+    });
+  });
+}
+
+function applyStaticText(lang){
+  var d = t(lang);
+  document.documentElement.lang = lang;
+  document.getElementById("doc-title").textContent = d.doc.title;
+  document.title = d.doc.title;
+  document.getElementById("meta-description").setAttribute("content", d.doc.description);
+  document.getElementById("og-title").setAttribute("content", d.doc.title);
+  document.getElementById("og-description").setAttribute("content", d.doc.description);
+
+  Array.prototype.forEach.call(document.querySelectorAll("[data-i18n]"), function(node){
+    var path = node.getAttribute("data-i18n").split(".");
+    var val = d;
+    for(var i=0;i<path.length;i++){ val = val && val[path[i]]; }
+    if(typeof val === "string"){ node.innerHTML = val; }
+  });
+  Array.prototype.forEach.call(document.querySelectorAll("[data-i18n-html]"), function(node){
+    var path = node.getAttribute("data-i18n-html").split(".");
+    var val = d;
+    for(var i=0;i<path.length;i++){ val = val && val[path[i]]; }
+    if(typeof val === "string"){ node.innerHTML = val; }
+  });
+
+  document.getElementById("topbar-contact").textContent = d.topbarContact;
+}
+
+function render(lang){
+  STATE.lang = lang;
+  applyStaticText(lang);
+  renderWhy(lang);
+  renderSkills(lang);
+  renderTimeline(lang);
+  renderEducation(lang);
+  renderCases(lang);
+  renderStar(lang);
+
+  Array.prototype.forEach.call(document.querySelectorAll("[data-lang-btn]"), function(btn){
+    btn.setAttribute("aria-pressed", btn.getAttribute("data-lang-btn") === lang ? "true" : "false");
+  });
+}
+
+/* ---------------------------------------------------------------------- */
+document.addEventListener("DOMContentLoaded", function(){
+  render(detectLang());
+
+  Array.prototype.forEach.call(document.querySelectorAll("[data-lang-btn]"), function(btn){
+    btn.addEventListener("click", function(){
+      render(btn.getAttribute("data-lang-btn"));
+    });
+  });
+
+  var stickyBar = document.getElementById("sticky-cta");
+  var heroEl = document.querySelector(".hero");
+  var lastY = 0;
+  function onScroll(){
+    var heroBottom = heroEl ? heroEl.getBoundingClientRect().bottom : 0;
+    if(heroBottom < 0){
+      stickyBar.classList.add("visible");
+    } else {
+      stickyBar.classList.remove("visible");
+    }
+  }
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+});
+
+})();
+
+</script>
+</body>
+</html>
